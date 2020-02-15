@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+[[ -f ~/dotfiles/.p10k.zsh ]] && source ~/dotfiles/.p10k.zsh
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias edit="subl"
@@ -128,3 +128,4 @@ else
 fi
 unset __conda_setup
 conda deactivate
+export VIMINIT="source ~/dotfiles/.vimrc"
