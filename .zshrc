@@ -113,6 +113,9 @@ alias vi="/usr/local/vim"
 alias swing="cd ~/MobileAppHero/mainswingkings/SwingKings/"
 alias sshpi="ssh pi@192.168.86.26"
 alias pixel="~/Library/Android/sdk/tools/emulator -avd Pixel_2_XL_API_26"
+alias vimzsh="vim ~/dotfiles/.zshrc"
+alias sourcezsh="source ~/dotfiles/.zshrc"
+alias vimrc="vim ~/dotfiles/.vimrc"
 
 
 __conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/pranavbokey/miniconda2/bin/conda' shell.bash hook 2> /dev/null)"
@@ -129,3 +132,4 @@ fi
 unset __conda_setup
 conda deactivate
 export VIMINIT="source ~/dotfiles/.vimrc"
+bindkey -v
