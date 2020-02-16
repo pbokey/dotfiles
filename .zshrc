@@ -1,10 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/$HOME/miniconda2/bin:$PATH"
-export PATH="$PATH:/usr/local/mongodb/bin"
-export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
+#  export PATH=$HOME/bin:/usr/local/bin:$PATH
+#  export PATH="/$HOME/miniconda2/bin:$PATH"
+#  export PATH="$PATH:/usr/local/mongodb/bin"
+# export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/pranavbokey/.oh-my-zsh
+export ZSH=/home/pbokey/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -81,6 +81,12 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -99,37 +105,37 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/dotfiles/.p10k.zsh ]] && source ~/dotfiles/.p10k.zsh
 
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias edit="subl"
-alias cddesk="cd ~/Desktop/"
-alias cdgit="cd ~/Developer/GitHub/"
-alias cdpro="cd ~/Programing/"
-alias path="echo -e ${PATH//:/\\n}"
-alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
-alias gittree="git log --graph --oneline --all"
-alias vim="/usr/local/bin/vim"
-alias vi="/usr/local/vim"
+# alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+# alias edit="subl"
+# alias cddesk="cd ~/Desktop/"
+# alias cdgit="cd ~/Developer/GitHub/"
+# alias cdpro="cd ~/Programing/"
+# alias path="echo -e ${PATH//:/\\n}"
+# alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
+# alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+# alias gittree="git log --graph --oneline --all"
+# alias vim="/usr/local/bin/vim"
+# alias vi="/usr/local/vim"
 alias swing="cd ~/MobileAppHero/mainswingkings/SwingKings/"
 alias sshpi="ssh pi@192.168.86.26"
-alias pixel="~/Library/Android/sdk/tools/emulator -avd Pixel_2_XL_API_26"
+# alias pixel="~/Library/Android/sdk/tools/emulator -avd Pixel_2_XL_API_26" 
 alias vimzsh="vim ~/dotfiles/.zshrc"
 alias sourcezsh="source ~/dotfiles/.zshrc"
 alias vimrc="vim ~/dotfiles/.vimrc"
 
 
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/pranavbokey/miniconda2/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-  \eval "$__conda_setup"
-else
-  if [ -f "/Users/pranavbokey/miniconda2/etc/profile.d/conda.sh" ]; then
-    . "/Users/pranavbokey/miniconda2/etc/profile.d/conda.sh"
-    CONDA_CHANGEPS1=false conda activate base
-  else
-    \export PATH="/Users/pranavbokey/miniconda2/bin:$PATH"
-  fi
-fi
-unset __conda_setup
-conda deactivate
-export VIMINIT="source ~/dotfiles/.vimrc"
+# __conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/pranavbokey/miniconda2/bin/conda' shell.bash hook 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#   \eval "$__conda_setup"
+# else
+#   if [ -f "/Users/pranavbokey/miniconda2/etc/profile.d/conda.sh" ]; then
+#     . "/Users/pranavbokey/miniconda2/etc/profile.d/conda.sh"
+#     CONDA_CHANGEPS1=false conda activate base
+#   else
+#     \export PATH="/Users/pranavbokey/miniconda2/bin:$PATH"
+#   fi
+# fi
+# unset __conda_setup
+# conda deactivate
+export VIMINIT="source /home/pbokey/dotfiles/.vimrc"
 bindkey -v
