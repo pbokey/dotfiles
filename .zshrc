@@ -4,8 +4,8 @@
 #  export PATH="$PATH:/usr/local/mongodb/bin"
 # export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
 # Path to your oh-my-zsh installation.
-export ZSH=/home/pbokey/.oh-my-zsh
-
+export TERM=xterm-256color
+export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -81,11 +81,11 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
-else
-        export TERM='xterm-color'
-fi
+# if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+#         export TERM='xterm-256color'
+# else
+#         export TERM='xterm-color'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -137,5 +137,5 @@ alias vimrc="vim ~/dotfiles/.vimrc"
 # fi
 # unset __conda_setup
 # conda deactivate
-export VIMINIT="source /home/pbokey/dotfiles/.vimrc"
+export VIMINIT="source ~/dotfiles/.vimrc"
 bindkey -v

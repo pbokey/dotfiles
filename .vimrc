@@ -2,7 +2,6 @@
 set nocompatible
 " Use the Desert Dark theme
 " set background=dark
-colorscheme nord
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -114,6 +113,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 set timeoutlen=1000 ttimeoutlen=0
 
+" custom mappings
 inoremap <silent><expr> <c-space> coc#refresh()
 nnoremap j k
 nnoremap k j
@@ -143,7 +143,8 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <F2> <Plug>(coc-rename)
 xmap <leader>f  <Plug><coc-format-selected)
 nmap <leader>f  <Plug>coc-format-selected)
-" auto close bracket
+
+" indent stuff 
 set expandtab
 set shiftwidth=2
 set smarttab
@@ -165,12 +166,12 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 if has("autocmd")
-" Enable file type detection
-filetype on
-" Treat .json files as .js
-autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-" Treat .md files as Markdown
-autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+  " Enable file type detection
+  filetype on
+  " Treat .json files as .js
+  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  " Treat .md files as Markdown
+  autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
 " inject all plugins
@@ -210,19 +211,13 @@ call vundle#begin()
   Plugin 'severin-lemaignan/vim-minimap'
   Plugin 'christoomey/vim-tmux-navigator'
   Plugin 'othree/yajs.vim'
+  Plugin 'arcticicestudio/nord-vim'
   Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " End Vundle Config
-
-" Begin VimPlug Config
-call plug#begin()
-
-  Plug 'arcticicestudio/nord-vim'
-
-call plug#end()
 
 " FORMATTERS
 au FileType javascript setlocal formatprg=prettier
@@ -232,7 +227,9 @@ au FileType html setlocal formatprg=js-beautify\ --type\ html
 au FileType scss setlocal formatprg=prettier\ --parser\ css
 au FileType css setlocal formatprg=prettier\ --parser\ css
 
-
+colorscheme nord
 let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
 set noshowmode
