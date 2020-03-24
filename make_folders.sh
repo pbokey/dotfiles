@@ -4,7 +4,7 @@
 
 	cd ~ &&
 	mkdir Developer &&
-	mkdir Developer/Github &&
+	mkdir Developer/GitHub &&
 	mkdir Programmging
 )
 

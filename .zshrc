@@ -3,6 +3,8 @@ if [ "$(uname 2> /dev/null)" != "Linux" ]; then
     export PATH="/$HOME/miniconda2/bin:$PATH"
     export PATH="$PATH:/usr/local/mongodb/bin"
     export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
+else
+  export PATH="$PATH:/home/pbokey/.local/bin"
 fi
 # If you come from bash you might have to change your $PATH.
  # Path to your oh-my-zsh installation.
@@ -74,11 +76,12 @@ source $ZSH/oh-my-zsh.sh
 
 # alias edit="subl"
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
+    echo "True"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias edit="subl"
 fi
 alias cddesk="cd ~/Desktop/"
-alias cdgit="cd ~/Developer/GitHub/"
+alias cdgit="cd ~/Developer/GitHub"
 alias cdpro="cd ~/Programing/"
 alias path="echo -e ${PATH//:/\\n}"
 alias gittree="git log --graph --oneline --all"
