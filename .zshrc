@@ -105,20 +105,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/dotfiles/.p10k.zsh ]] && source ~/dotfiles/.p10k.zsh
 
-# alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 # alias edit="subl"
-# alias cddesk="cd ~/Desktop/"
-# alias cdgit="cd ~/Developer/GitHub/"
-# alias cdpro="cd ~/Programing/"
-# alias path="echo -e ${PATH//:/\\n}"
-# alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-# alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
-# alias gittree="git log --graph --oneline --all"
-# alias vim="/usr/local/bin/vim"
-# alias vi="/usr/local/vim"
-alias swing="cd ~/MobileAppHero/mainswingkings/SwingKings/"
+alias gittree="git log --graph --oneline --all"
 alias sshpi="ssh pi@192.168.86.26"
-# alias pixel="~/Library/Android/sdk/tools/emulator -avd Pixel_2_XL_API_26" 
 alias vimzsh="vim ~/dotfiles/.zshrc"
 alias sourcezsh="source ~/dotfiles/.zshrc"
 alias vimrc="vim ~/dotfiles/.vimrc"
