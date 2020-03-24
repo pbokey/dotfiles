@@ -69,41 +69,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-#         export TERM='xterm-256color'
-# else
-#         export TERM='xterm-color'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/dotfiles/.p10k.zsh ]] && source ~/dotfiles/.p10k.zsh
 
@@ -113,8 +78,6 @@ alias cddesk="cd ~/Desktop/"
 alias cdgit="cd ~/Developer/GitHub/"
 alias cdpro="cd ~/Programing/"
 alias path="echo -e ${PATH//:/\\n}"
-alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias gittree="git log --graph --oneline --all"
 alias vim="/usr/local/bin/vim"
 alias vi="/usr/local/vim"
