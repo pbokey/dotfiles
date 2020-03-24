@@ -1,11 +1,11 @@
+if [ "$(uname 2> /dev/null)" != "Linux" ]; then
+    export PATH=$HOME/bin:/usr/local/bin:$PATH
+    export PATH="/$HOME/miniconda2/bin:$PATH"
+    export PATH="$PATH:/usr/local/mongodb/bin"
+    export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
+fi
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/$HOME/miniconda2/bin:$PATH"
-export PATH="$PATH:/Users/pranavbokey/go/bin"
-export PATH="$PATH:/usr/local/mongodb/bin"
-export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
-export GOPATH="$(go env PATH)"
-#  Path to your oh-my-zsh installation.
+ # Path to your oh-my-zsh installation.
 export TERM=xterm-256color
 export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -73,15 +73,14 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/dotfiles/.p10k.zsh ]] && source ~/dotfiles/.p10k.zsh
 
 # alias edit="subl"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias edit="subl"
+if [ "$(uname 2> /dev/null)" != "Linux" ]; then
+    alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+    alias edit="subl"
+fi
 alias cddesk="cd ~/Desktop/"
 alias cdgit="cd ~/Developer/GitHub/"
 alias cdpro="cd ~/Programing/"
 alias path="echo -e ${PATH//:/\\n}"
-alias gittree="git log --graph --oneline --all"
-alias vim="/usr/local/bin/vim"
-alias vi="/usr/local/vim"
 alias gittree="git log --graph --oneline --all"
 alias sshpi="ssh pi@192.168.86.26"
 alias vimzsh="vim ~/dotfiles/.zshrc"
