@@ -2,3 +2,6 @@
 ".**
 .zcompdump**
 .zsh_history
+.vim/swaps/*
+.vim/bundle/*
+.vim/.netrwhist

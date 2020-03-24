@@ -1,9 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-#  export PATH=$HOME/bin:/usr/local/bin:$PATH
-#  export PATH="/$HOME/miniconda2/bin:$PATH"
-#  export PATH="$PATH:/usr/local/mongodb/bin"
-# export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
-# Path to your oh-my-zsh installation.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/$HOME/miniconda2/bin:$PATH"
+export PATH="$PATH:/Users/pranavbokey/go/bin"
+export PATH="$PATH:/usr/local/mongodb/bin"
+export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
+export GOPATH="$(go env PATH)"
+#  Path to your oh-my-zsh installation.
 export TERM=xterm-256color
 export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -67,51 +69,29 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-#         export TERM='xterm-256color'
-# else
-#         export TERM='xterm-color'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/dotfiles/.p10k.zsh ]] && source ~/dotfiles/.p10k.zsh
 
+<<<<<<< HEAD
 # alias edit="subl"
 alias gittree="git log --graph --oneline --all"
+=======
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias edit="subl"
+alias cddesk="cd ~/Desktop/"
+alias cdgit="cd ~/Developer/GitHub/"
+alias cdpro="cd ~/Programing/"
+alias path="echo -e ${PATH//:/\\n}"
+alias gittree="git log --graph --oneline --all"
+alias vim="/usr/local/bin/vim"
+alias vi="/usr/local/vim"
+alias swing="cd ~/MobileAppHero/mainswingkings/SwingKings/"
+>>>>>>> 6b1e2da280a5f4301a322b46a3135e73fe3e4a8f
 alias sshpi="ssh pi@192.168.86.26"
 alias vimzsh="vim ~/dotfiles/.zshrc"
 alias sourcezsh="source ~/dotfiles/.zshrc"
 alias vimrc="vim ~/dotfiles/.vimrc"
-
+eval $(thefuck --alias)
 
 # __conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/pranavbokey/miniconda2/bin/conda' shell.bash hook 2> /dev/null)"
 # if [ $? -eq 0 ]; then

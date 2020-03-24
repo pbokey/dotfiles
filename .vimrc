@@ -125,6 +125,12 @@ vnoremap <leader>u 10k
 vnoremap  <leader>d  10j
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
+nnoremap <leader>/  :nohl<CR>
+nnoremap <leader>s :w<CR>
+nnoremap gb :Gblame<CR>
+nnoremap <leader>q :q<CR>
+map <leader>h :tabr<cr>
+map <leader>l :tabl<cr>
 
 "jsx ft
 autocmd BufNewFile,BufRead *.jsx setlocal ft=html ft=javascript
@@ -213,6 +219,10 @@ call vundle#begin()
   Plugin 'othree/yajs.vim'
   Plugin 'arcticicestudio/nord-vim'
   Plugin 'vim-airline/vim-airline-themes'
+  Plugin 'tpope/vim-eunuch'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'mihaifm/bufstop'
+  Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -231,6 +241,25 @@ colorscheme nord
 let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" disable vim-go :GoDef short cut (gd)
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
+
+" buffer commands
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+map <leader>b :BufstopMode<CR>
+
+let g:BufstopAutoSpeedToggle = 1       " now I can press ,3,3,3 to cycle the last 3 buffers
+map <C-tab>   :BufstopBack<CR>
+map <S-tab>   :BufstopForward<CR>
 
 set noshowmode
 set hidden
+<<<<<<< HEAD
+=======
+set conceallevel=0
+>>>>>>> 6b1e2da280a5f4301a322b46a3135e73fe3e4a8f
