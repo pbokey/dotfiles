@@ -3,5 +3,5 @@
 .zcompdump**
 .zsh_history
 .vim/swaps/*
-.vim/bundle/*
+**/.vim/bundle/**
 .vim/.netrwhist
