@@ -1,0 +1,51 @@
+env:
+  term: xterm-256color
+window:
+  dimensions:
+    columns: 80
+    rows: 55
+
+visual_bell:
+  animation: EaseOutExpo
+  duration: 0
+
+shell:
+  program: /bin/zsh
+
+font:
+  size: 14.0
+  normal:
+    family: MesloLGS NF
+    style: Regular
+
+  bold:
+    family: MesloLGS NF
+
+  italic:
+    family: MesloLGS NF
+
+colors:
+  primary:
+    background: '0x222b33'
+  
+  normal:
+    black: '0x3b4251'
+    red: '0xbf6059'
+    green: '0xa3be8b'
+    yellow: '0xeacb8a'
+    blue: '0x81a1c1'
+    magenta: '0xb48dac'
+    cyan: '0x88c0d0'
+    white: '0xe5e9f0'
+
+  bright:
+    black: '0x4c556a'
+    red: '0xbf6069'
+    white: '0xbf6069'
+    green: '0xa3be8b'
+    yellow: '0xeacb8a'
+    blue: '0x81a1c1'
+    magenta: '0xb48dac'
+    cyan: '0x8fbcbb'
+    white: '0xeceef4'
+
