@@ -223,6 +223,8 @@ call vundle#begin()
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'mihaifm/bufstop'
   Plugin 'fatih/vim-go'
+  Plugin 'nathanaelkane/vim-indent-guides'
+  Plugin 'terryma/vim-multiple-cursors' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -236,6 +238,8 @@ au FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 au FileType html setlocal formatprg=js-beautify\ --type\ html
 au FileType scss setlocal formatprg=prettier\ --parser\ css
 au FileType css setlocal formatprg=prettier\ --parser\ css
+
+autocmd FileType python setlocal tabstop=2
 
 colorscheme nord
 let g:airline_theme='nord'
