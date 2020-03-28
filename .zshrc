@@ -3,9 +3,11 @@ if [ "$(uname 2> /dev/null)" != "Linux" ]; then
     export PATH="/$HOME/miniconda2/bin:$PATH"
     export PATH="$PATH:/usr/local/mongodb/bin"
     export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
+    export GOPATH="/Users/pranavbokey/go/"
 else
   export PATH="$PATH:/home/pbokey/.local/bin"
 fi
+
 # If you come from bash you might have to change your $PATH.
  # Path to your oh-my-zsh installation.
 export TERM=xterm-256color
@@ -76,7 +78,6 @@ source $ZSH/oh-my-zsh.sh
 
 # alias edit="subl"
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-    echo "True"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias edit="subl"
 fi
