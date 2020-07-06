@@ -1,9 +1,9 @@
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
     export PATH=$HOME/bin:/usr/local/bin:$PATH
-    export PATH="/$HOME/miniconda2/bin:$PATH"
-    export PATH="$PATH:/usr/local/mongodb/bin"
-    export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
-    export GOPATH="/Users/pranavbokey/go/"
+    #export PATH="/$HOME/miniconda2/bin:$PATH"
+    #export PATH="$PATH:/usr/local/mongodb/bin"
+    #export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
+    #export GOPATH="/Users/pranavbokey/go/"
 else
   export PATH="$PATH:/home/pbokey/.local/bin"
 fi
@@ -73,6 +73,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source /etc/bash_completion.d/hgd
+source /Library/GoogleCorpSupport/srcfs/shell_completion/enable_completion.sh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/dotfiles/.p10k.zsh ]] && source ~/dotfiles/.p10k.zsh
 
@@ -92,7 +95,7 @@ alias cddot="cd ~/dotfiles/"
 alias vimzsh="vim ~/dotfiles/.zshrc"
 alias sourcezsh="source ~/dotfiles/.zshrc"
 alias vimrc="vim ~/dotfiles/.vimrc"
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 
 # __conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/pranavbokey/miniconda2/bin/conda' shell.bash hook 2> /dev/null)"
 # if [ $? -eq 0 ]; then
@@ -109,3 +112,9 @@ eval $(thefuck --alias)
 # conda deactivate
 export VIMINIT="source ~/dotfiles/.vimrc"
 bindkey -v
+alias genhub='generate_xcodeproj.sh --genconfig googlemac/iPhone/Hub/Hub.tulsiproj:HubAsMeet --outputfolder ~/Desktop'
+
+generate-gmail-xcode-proj() {
+  googlemac/iPhone/GooglePlus/scripts/tulsigen "$1" --build-options "--config=gmail" --additionalSourceFilters googlemac/iPhone/Bigtop/...
+}
+alias genmeet='generate_xcodeproj.sh --genconfig googlemac/iPhone/Meetings/Meetings.tulsiproj:Meetings-device --outputfolder ~/Desktop'

@@ -31,7 +31,7 @@ endif
 set autochdir
 cd %:h
 " Don’t create backups when editing files in certain directories
-set backupskip=/tmp/*,/private/tmp/*
+set backupskip=~/dotfiles/.vim/backups
 
  " Respect modeline in files
  set modeline
@@ -87,7 +87,7 @@ set backupskip=/tmp/*,/private/tmp/*
  nmap <CR> o<Esc>
  nnoremap R "_d
 
- let g:nerdtree_tabs_open_on_console_startup=1
+ "let g:nerdtree_tabs_open_on_console_startup=1
 
  " COC configs
  let g:coc_global_extensions = [
@@ -180,22 +180,12 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
-" inject all plugins
-set nocompatible
-set rtp+="~/dotfiles/.vim/autoload/pathogen.vim"
-
-execute pathogen#infect()
-
-if has('python3')
-  let g:gundo_prefer_python3 = 1
-endif
-
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Begin Vundle Config
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
-set rtp+=/home/pbokey/dotfiles/.vim/bundle/Vundle.vim
+set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -204,7 +194,7 @@ call vundle#begin()
 
   Plugin 'VundleVim/Vundle.vim'
   Plugin 'vim-airline/vim-airline'
-  Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+  "Plugin 'neoclide/coc.nvim', {'branch': 'release'}
   Plugin 'sjl/gundo.vim'
   Plugin 'yggdroot/indentline'
   Plugin 'preservim/nerdtree'
