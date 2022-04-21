@@ -1,5 +1,6 @@
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-    export PATH=$HOME/bin:/usr/local/bin:$PATH
+    export PATH=$PATH:$HOME/bin:/usr/local/bin
+    #export PATH=$PATH:~/.npm-global/bin
     #export PATH="/$HOME/miniconda2/bin:$PATH"
     #export PATH="$PATH:/usr/local/mongodb/bin"
     #export PATH="$PATH:/Users/pranavbokey/Programing/flutter/flutter/bin"
@@ -112,9 +113,33 @@ alias vimrc="vim ~/dotfiles/.vimrc"
 # conda deactivate
 export VIMINIT="source ~/dotfiles/.vimrc"
 bindkey -v
-alias genhub='generate_xcodeproj.sh --genconfig googlemac/iPhone/Hub/Hub.tulsiproj:HubAsMeet --outputfolder ~/Desktop'
+
 
 generate-gmail-xcode-proj() {
-  googlemac/iPhone/GooglePlus/scripts/tulsigen "$1" --build-options "--config=gmail" --additionalSourceFilters googlemac/iPhone/Bigtop/...
+  googlemac/iPhone/GooglePlus/scripts/tulsigen "$1" --build-options "--config=gmail" --additionalSourceFilters googlemac/iPhone/Bigtop/... googlemac/iPhone/Hub/... googlemac/iPhone/Dynamite/... googlemac/iPhone/Voice/... googlemac/iPhone/ConferenceKit/...
 }
+
+alias genham='generate_xcodeproj.sh --genconfig googlemac/iPhone/Hub/Hub.tulsiproj:HubAsMeet --outputfolder ~/Desktop'
+#alias genham='googlemac/iPhone/GooglePlus/scripts/tulsigen googlemac/iPhone/Hub:HubAsMeet'
 alias genmeet='generate_xcodeproj.sh --genconfig googlemac/iPhone/Meetings/Meetings.tulsiproj:Meetings-device --outputfolder ~/Desktop'
+alias genmig='generate_xcodeproj.sh --genconfig googlemac/iPhone/Hub/Hub.tulsiproj:HubDev-CallsOnly --outputfolder ~/Desktop'
+alias gendemo='generate_xcodeproj.sh --genconfig googlemac/iPhone/ConferenceKit/Demo/ConferenceKitDemo.tulsiproj:Demo --outputfolder ~/Desktop'
+alias genhub='generate_xcodeproj.sh --genconfig googlemac/iPhone/Hub/Hub.tulsiproj:HubDev  --outputfolder ~/Desktop'
+alias "'hg status'=hg status -q"
+alias revertp4="hg revert -r p4head"
+alias buildoptions='--config=ios_x86_64 --xcode_version=12.0 --ios_minimum_os=12.0'
+alias codedemo='code googlemac/iPhone/ConferenceKit/CKDemo.code-workspace'
+alias codeham='code googlemac/iPhone/Hub/Hub.code-workspace'
+alias sshtop='ssh pbokey-cloudtop.c.googlers.com'
+alias duo_env='source /google/src/head/depot/google3/googlemac/iPhone/Duo/Tools/duo_env.sh || echo "Please run ''gcert'' and then try ''duo_env'' again"'
+alias sync='hg shelve && hg sync && hg unshelve'
+alias codesync="code experimental/video-s11y-eng/iOS/TestApp.code-workspace"
+function revertp4all () {
+  for value in "$@"
+  do
+    hg revert -r p4head ${value}
+    echo "reverted ${value}"
+  done
+
+  echo "revert done"
+}
